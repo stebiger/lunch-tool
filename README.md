@@ -7,6 +7,7 @@ If a user wants to order he chooses a delivery company and all registered users 
 
 # No more mass-email around offices
 # decide what you would like to eat - stop bothering with deliveries you don't want to 
+<<<<<<< HEAD
 
 
 # Frameworks
