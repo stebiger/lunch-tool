@@ -1,22 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:b="http://bootsfaces.net/ui">
-    <h:head>
-        <title>OC HG Lunch</title>
-        <meta name="sbi" content="Stefan Billeb"></meta>
-    </h:head>
-    <h:body style="padding: 60px;">
-        <b:navBar brand="HG Lunch" brandoutcome="" fixed="top" inverse="true">
-            <b:navbarLinks>
-                <b:navLink value="Start" outcome="index"></b:navLink>
-                <b:navLink value="Registrieren" outcome="register"></b:navLink>
-                <b:navLink value="Benutzer" outcome="benutzer"></b:navLink>
-                <b:navLink value="Bestellen" outcome="order"></b:navLink>
-                <b:navLink value="Lieferdienste" outcome="lieferdienste"></b:navLink>
-            </b:navbarLinks>
-        </b:navBar>
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="pageTemplate.xhtml">
+
+	<ui:define name="content">
         <b:container>
             <b:jumbotron>
                 <h1>Easy Lunch ordering</h1>
@@ -34,6 +24,5 @@
                 </p>
             </b:jumbotron>
         </b:container>
-
-    </h:body>
-</html>
+	</ui:define>
+</ui:composition>
