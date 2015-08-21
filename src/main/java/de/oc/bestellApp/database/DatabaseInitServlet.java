@@ -27,7 +27,10 @@ public class DatabaseInitServlet extends Servlet {
 			server.setLogWriter(null); // can use custom writer
 			server.setErrWriter(null); // can use custom writer
 			server.start();
-		} catch (IOException | AclFormatException e) {
+		} catch (IOException e) {
+			throw new ServletException(e);
+		}
+		catch(AclFormatException e) {
 			throw new ServletException(e);
 		}
 	}
