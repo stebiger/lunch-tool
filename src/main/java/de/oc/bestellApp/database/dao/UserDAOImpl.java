@@ -22,8 +22,9 @@ public class UserDAOImpl implements IUserDAO {
 	public UserDAOImpl() {
 		// 1. configuring hibernate
         config = new Configuration().configure();
-        StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder().applySettings(config.getProperties());
-        sessionFactory = config.buildSessionFactory(ssrb.build());
+        StandardServiceRegistryBuilder ssrb;
+		ssrb = new StandardServiceRegistryBuilder().applySettings(config.getProperties());
+		sessionFactory = config.buildSessionFactory(ssrb.build());
         session = sessionFactory.openSession();
 	}
 	
