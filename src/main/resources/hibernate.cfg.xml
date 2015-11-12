@@ -6,21 +6,22 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="dialect">
-			org.hibernate.dialect.HSQLDialect
+			org.hibernate.dialect.Oracle10gDialect
 		</property>
 		<property name="connection.driver_class">
-			org.hsqldb.jdbcDriver
+			oracle.jdbc.OracleDriver
 		</property>
 		<property name="connection.username">
-			sa
+			lunchApp
 		</property>
 		<property name="connection.password">
+			robinha
 		</property>
 		<property name="connection.url">
-			jdbc:hsqldb:file:bestellAppDB
+			jdbc:oracle:thin:@localhost:1521/xe
 		</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
-		<mapping resource="de/oc/bestellApp/user/User.hbm.xml" />
+		<mapping resource="User.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
