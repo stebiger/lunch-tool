@@ -9,11 +9,6 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.jsf</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>InitDatabase</servlet-name>
-    <servlet-class>de.oc.bestellApp.database.DatabaseInitServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-</servlet> 
   <context-param>
     <param-name>javax.faces.PROJECT_STAGE</param-name>
     <param-value>Development</param-value>
