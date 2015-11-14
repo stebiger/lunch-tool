@@ -13,16 +13,16 @@
     <h:panelGrid>
         
         <h:outputText value="Name:"/>
-        <b:inputText value="#{registerUserBean.user.name}" placeholder="Robina Kuh"/>
+        <b:inputText value="#{registerController.user.name}" placeholder="Robina Kuh"/>
         
         <h:outputText value="E-Mail:"/>
-        <b:inputText value="#{registerUserBean.user.email}" placeholder="robina.kuh@oc.com" size="32">
+        <b:inputText value="#{registerController.user.email}" placeholder="robina.kuh@oc.com" size="32">
             <f:facet name="prepend">
                 <h:outputText value="@" />
             </f:facet>
         </b:inputText>
         
-        <b:commandButton value="Registrieren" icon="envelope" action="#{registerUserBean.registerUser}"/>
+        <b:commandButton value="Registrieren" icon="envelope" action="#{registerController.registerUser}"/>
     </h:panelGrid>
 </h:form>
 </b:panel>
