@@ -8,19 +8,35 @@
 	template="pageTemplate.xhtml">
 
 	<ui:define name="content">
-		<h:dataTable styleClass="table table-striped"
-			value="#{userManager.users}" var="user">
+		<b:dataTable value="#{userManager.users}" var="user" id="id" styleClass="table table-striped table-bordered"
+					 style="width:100%">
 			<h:column>
-				<f:facet name="header"> Name</f:facet>
-   #{user.name}
-</h:column>
+				<f:facet name="header">
+					<h:outputText value="Name" />
+				</f:facet>
+				<h:outputText value="#{user.name}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Email" />
+				</f:facet>
+				<h:outputText value="#{user.email}"/>
+			</h:column>
+
+		</b:dataTable>
+		<!--<h:dataTable styleClass="table table-striped"-->
+			<!--value="#{userManager.users}" var="user">-->
+			<!--<h:column>-->
+				<!--<f:facet name="header"> Name</f:facet>-->
+   <!--#{user.name}-->
+<!--</h:column>-->
 
 
-			<h:column>
-				<f:facet name="header"> Email</f:facet>
-     #{user.email}
-</h:column>
-		</h:dataTable>
+			<!--<h:column>-->
+				<!--<f:facet name="header"> Email</f:facet>-->
+     <!--#{user.email}-->
+<!--</h:column>-->
+		<!--</h:dataTable>-->
 
 	</ui:define>
 </ui:composition>

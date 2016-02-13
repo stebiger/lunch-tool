@@ -4,7 +4,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="de.oc.bestellApp.user">
 	<class name="de.oc.bestellApp.user.User" table="Benutzer">
-		<id column="ID" name="id" type="java.lang.Long">
+		<id column="ID" name="id" type="java.lang.Long" unsaved-value="0">
 			<generator class="native" />
 		</id>
 		<property column="NAME" name="name" type="java.lang.String" />

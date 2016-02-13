@@ -1,7 +1,6 @@
 package de.oc.bestellApp.database.dao;
 
-import java.util.ArrayList;
-
+import de.oc.bestellApp.user.User;
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -10,7 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import de.oc.bestellApp.user.User;
+import java.util.ArrayList;
 
 public class UserDAOImpl implements IUserDAO {
 

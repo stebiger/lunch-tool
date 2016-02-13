@@ -1,9 +1,12 @@
 package de.oc.bestellApp.lieferdienste;
 
-import javax.faces.bean.ManagedBean;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+import java.io.Serializable;
 
-@ManagedBean
-public class Lieferdienst {
+@Named("lieferdienst")
+@SessionScoped
+public class Lieferdienst implements Serializable {
 
 	private int id;
 	private String name;

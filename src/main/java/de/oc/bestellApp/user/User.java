@@ -1,14 +1,10 @@
 package de.oc.bestellApp.user;
 
-import javax.faces.bean.ManagedBean;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
 @Entity
-@ManagedBean
 public class User {
 	
 	private Long id;
@@ -22,6 +18,7 @@ public class User {
 	public User(String Name, String Email) {
 		this.name = Name;
 		this.email = Email;
+		setId(new Long(0)); // set unsaved-value
 	}
 
 	@Id

@@ -8,6 +8,9 @@
       template="pageTemplate.xhtml">
 
 	<ui:define name="content">
+        <f:metadata>
+            <f:viewAction action="#{registerController.init()}" />
+        </f:metadata>
 <b:panel title="Registrierung" look="primary">
 <h:form>
     <h:panelGrid>

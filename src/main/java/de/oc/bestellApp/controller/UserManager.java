@@ -1,28 +1,33 @@
 package de.oc.bestellApp.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.faces.bean.ManagedBean;
-
-import org.apache.log4j.Logger;
-
 import de.oc.bestellApp.database.dao.UserDAOImpl;
 import de.oc.bestellApp.user.User;
+import org.apache.log4j.Logger;
 
-@ManagedBean
-public class UserManager {
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+import java.io.Serializable;
+import java.util.List;
 
+@Named
+@RequestScoped
+public class UserManager implements Serializable {
+
+
+	private static final long serialVersionUID = 1520213630108557111L;
 	private List<User> users;
 	private UserDAOImpl userDAO;
-	
-	public UserManager() {
+
+	@PostConstruct
+	public void init() {
 		Logger.getLogger(UserManager.class).debug("Create UserManager");
 		userDAO = new UserDAOImpl();
 		users = userDAO.loadAll();
 	}
 
 	public List<User> getUsers() {
+		users = userDAO.loadAll();
 		return users;
 	}
 
